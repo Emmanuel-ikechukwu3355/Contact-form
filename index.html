@@ -1,0 +1,65 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Form</title>
+</head>
+<body>
+<main>
+    <div class="contact-form">
+        <h1>Contact Us</h1>
+        <form id="contact-form">
+            <div class="form-item">
+                <div class="first-name">
+                    <label for="first-name">First Name <span class="required-input">*</span></label>
+                    <input id="first-name" required type="text" name="first-name">
+                </div>
+                <div class="last-name">
+                    <label for="last-name">Last Name <span class="required-input">*</span></label>
+                    <input id="last-name" required type="text" name="last-name">
+                </div>
+            </div>
+            <div class="form-item">
+                <label for="email">Email Address <span class="required-input">*</span></label>
+                <input id="email" required type="email" name="email">
+                <p class="form-alert" id="email-alert">Please enter a valid email address</p>
+            </div>
+
+            <div class="form-item">
+            <label for="" class="labelRadio important">Query Type</label>
+            <section class="QueryType">
+                <div class="queryDiv">
+                    <label for="QT1" class="labelRadio">General Enquiry</label>
+                    <input type="radio" class="radioInput" name="QueryType" id="QT1" required>
+                    <span class="checkmark"></span>
+                </div>
+                <div class="queryDiv">
+                    <label for="QT2" class="labelRadio">Support Request</label>
+                    <input type="radio" class="radioInput" name="QueryType" id="QT2" required>
+                    <span class="checkmark"></span>
+                </div>
+                </section>
+            </section>
+            <p aria-live="assertive" role="alert" class="invalid-Value-Text valid-Value-Text" id="textInputRadio">Please select a query type</p>
+            <div class="form-item">
+                <label for="message">Message <span class="required-input">*</span></label>
+                <textarea name="message" id="message" rows="4" required></textarea>
+            </div>
+            <div class="form-item">
+                <div>
+                    <input type="checkbox" name="consent" id="consent" required>
+                    <label for="consent">I consent to being contacted by the team <span class="required-input">*</span></label>
+                </div>
+            </div>
+            <button type="submit" id="submit-btn" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
